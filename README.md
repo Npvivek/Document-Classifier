@@ -1,78 +1,70 @@
 # Qwen2-VL Document Classification Pipeline
 
-![Python](https://img.shields.io/badge/Python-3.10+-blue?logo=python&logoColor=white)
-![Framework](https://img.shields.io/badge/Framework-HuggingFace-orange?logo=huggingface)
-![License](https://img.shields.io/badge/License-MIT-green)
-![Contributions](https://img.shields.io/badge/Contributions-Welcome-brightgreen?logo=github)
-![GPU Required](https://img.shields.io/badge/Min%20GPU%20RAM-8GB-red)
+![Python](https://img.shields.io/badge/Python-3.10+-blue?logo=python&logoColor=white) ![Framework](https://img.shields.io/badge/Framework-HuggingFace-orange?logo=huggingface) ![Model](https://img.shields.io/badge/Model-Qwen2--VL-2B-lightgrey?logo=openai) ![License](https://img.shields.io/badge/License-MIT-green) ![Contributions](https://img.shields.io/badge/Contributions-Welcome-brightgreen?logo=github) ![GPU Required](https://img.shields.io/badge/Min%20GPU%20RAM-8GB-red)
+
+Welcome to the **Qwen2-VL Document Classification Pipeline** project! This repository showcases a powerful, streamlined pipeline for classifying various document types using the **Qwen2-VL-2B-GPTQ-INT4** model.
 
 ---
 
-Welcome to the **Qwen2-VL Document Classification Pipeline**! This project is a powerful, AI-driven solution designed to accurately classify documents into predefined categories. Using the **Qwen2-VL-2B-GPTQ-INT4 model**, this pipeline processes PDF and image files, applies natural language processing techniques, and generates insightful classification reports.
+## **Project Overview**
+This pipeline leverages cutting-edge AI technology to classify documents into predefined categories. It supports image and PDF input formats, processes documents with efficient natural language understanding, and outputs precise classification reports and confusion matrices.
+
+**Key Features:**
+- Multi-page PDF handling with vertical merging of pages for seamless processing.
+- Optimized prompt engineering for domain-specific accuracy.
+- Automatic evaluation with detailed reports and visualizations.
+- Simple execution in Google Colab — no additional setup required!
 
 ---
 
 ## **Table of Contents**
-- [Features](#features)
 - [Requirements](#requirements)
 - [Setup](#setup)
+- [Usage in Google Colab](#usage-in-google-colab)
 - [Folder Structure](#folder-structure)
-- [Supported Document Types](#supported-document-types)
-- [Pipeline Workflow](#pipeline-workflow)
+- [Pipeline Steps](#pipeline-steps)
 - [Results and Reporting](#results-and-reporting)
 - [Future Enhancements](#future-enhancements)
 - [Contributing](#contributing)
 
 ---
 
-## **Features**
-
-- **End-to-End Document Processing**: Handles PDFs and images seamlessly.
-- **Custom Prompt Engineering**: Incorporates domain-specific patterns for accurate classification.
-- **Comprehensive Evaluation**: Generates confusion matrices and detailed classification reports.
-- **Color-Coded Results**: Exports results to an Excel file for clear insights.
-- **Multi-GPU Support**: Optimized for hardware acceleration.
-
----
-
 ## **Requirements**
 
-### **Hardware Requirements**
-- **Minimum CPU RAM**: 5 GB
-- **Minimum GPU RAM**: 8 GB
-- Additional memory for file storage and Docker layers.
-
-### **Software Requirements**
-- Python 3.10+
-- Libraries: `torch`, `transformers`, `scikit-learn`, `pdf2image`, `pandas`, `matplotlib`, `seaborn`, `openpyxl`
-- [Hugging Face Transformers](https://github.com/huggingface/transformers)
+**Hardware Requirements:**
+- **Minimum CPU RAM:** 5 GB
+- **Minimum GPU RAM:** 8 GB
+- Additional memory for file storage.
 
 ---
 
 ## **Setup**
+No complex installations or dependencies! Open the notebook in Google Colab, upload your files, and run the cells sequentially.
 
-### **1. Clone the Repository**
-```bash
-git clone <repository-url>
-cd <repository-folder>
-```
+---
 
-### **2. Install Dependencies**
-```bash
-apt-get update
-apt-get install poppler-utils -y
-pip install torch torchvision torchaudio scikit-learn pdf2image matplotlib seaborn openpyxl pandas
-pip install git+https://github.com/huggingface/transformers
-```
+## **Usage in Google Colab**
 
-### **3. Download the Model**
-The model is automatically downloaded during the pipeline execution or can be pre-downloaded using Hugging Face tools.
+1. **Open the Notebook**
+   Open the project notebook in Google Colab using this [link](https://colab.research.google.com/).
+
+2. **Upload Your Files**
+   Place your documents in the appropriate folders and mount your Google Drive.
+
+3. **Run the Notebook**
+   Execute the cells sequentially to:
+   - Load the model and processor.
+   - Convert PDFs to images.
+   - Classify documents and generate reports.
+
+4. **Download Results**
+   Results (Excel file, confusion matrix) are saved in the outputs directory for easy access.
 
 ---
 
 ## **Folder Structure**
-Ensure your file structure follows the format below for proper pipeline execution:
 
+Ensure your file structure follows this format for proper pipeline execution:
 ```
 root_directory/
     ├── azure_files/
@@ -89,53 +81,50 @@ root_directory/
 ---
 
 
-## **Pipeline Workflow**
+## **Pipeline Steps**
 
 1. **Load Model and Processor**
-   - Leverages the Qwen2-VL-2B-GPTQ-INT4 model for classification.
+   The pipeline utilizes the Qwen2-VL-2B-GPTQ-INT4 model for document classification.
 
 2. **PDF Conversion and Image Merging**
-   - Converts multi-page PDFs into vertically stacked images for efficient processing.
+   Multi-page PDFs are converted to vertically stacked images to ensure seamless input to the model.
 
-3. **Custom Prompt Engineering**
-   - Builds prompts with domain-specific patterns and keywords for better predictions.
+3. **Prompt Engineering**
+   Employs domain-specific patterns and keywords for improved classification accuracy.
 
 4. **Evaluation**
-   - Generates a confusion matrix and classification report.
-   - Saves results in a color-coded Excel file.
+   - Generates detailed confusion matrices and classification reports.
+   - Produces color-coded Excel files for results.
 
 5. **Visualization**
-   - Visualize classification performance using heatmaps and other plots.
+   Heatmaps and graphical representations provide insights into model performance.
 
 ---
 
 ## **Results and Reporting**
 
-### **Outputs Generated**
-- **Classification Accuracy**: Per-category and overall model performance metrics.
-- **Confusion Matrix**: Heatmap visualization of expected vs predicted classifications.
-- **Excel Reports**: Color-coded Excel files with classification details.
+**Outputs Include:**
+- **Classification Accuracy:** Per-category and overall performance.
+- **Confusion Matrix:** Heatmap of expected vs predicted classifications.
+- **Excel Reports:** Color-coded Excel files summarizing results.
 
 ---
 
 ## **Future Enhancements**
-- **OCR Integration**: Improve text extraction for better accuracy.
-- **Model Fine-Tuning**: Incorporate additional labeled data.
-- **Multilingual Support**: Expand capabilities to handle documents in multiple languages.
-- **Advanced Models**: Explore LayoutLMv3 for complex layouts.
+- Integration with OCR for enhanced text extraction.
+- Support for multilingual document classification.
+- Fine-tuning with additional labeled datasets.
+- Adoption of advanced models like LayoutLMv3 for complex layouts.
 
 ---
 
 ## **Contributing**
-We welcome contributions! Here's how you can get involved:
-
+We welcome contributions from the community! To contribute:
 1. Fork the repository.
 2. Create a feature branch.
-3. Submit a pull request with a detailed description of changes.
-
-For major changes, please open an issue first to discuss your ideas.
+3. Submit a pull request with a detailed explanation of your changes.
 
 ---
 
 
-Thank you for exploring the **Qwen2-VL Document Classification Pipeline**. Happy coding! 🚀
+**Start Classifying with Ease!** 🚀
