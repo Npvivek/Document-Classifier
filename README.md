@@ -2,7 +2,6 @@
 
 ![Python](https://img.shields.io/badge/Python-3.10+-blue?logo=python&logoColor=white)
 ![Framework](https://img.shields.io/badge/Framework-HuggingFace-orange?logo=huggingface)
-![Model](https://img.shields.io/badge/Model-Qwen2--VL-2B-lightgrey)
 ![License](https://img.shields.io/badge/License-MIT-green)
 ![Contributions](https://img.shields.io/badge/Contributions-Welcome-brightgreen?logo=github)
 ![GPU Required](https://img.shields.io/badge/Min%20GPU%20RAM-8GB-red)
