@@ -1,6 +1,6 @@
 # Qwen2-VL Document Classification Pipeline
 
-![Python](https://img.shields.io/badge/Python-3.10+-blue?logo=python&logoColor=white) ![Framework](https://img.shields.io/badge/Framework-HuggingFace-orange?logo=huggingface) ![Model](https://img.shields.io/badge/Model-Qwen2--VL-2B-lightgrey?logo=openai) ![License](https://img.shields.io/badge/License-MIT-green) ![Contributions](https://img.shields.io/badge/Contributions-Welcome-brightgreen?logo=github) ![GPU Required](https://img.shields.io/badge/Min%20GPU%20RAM-8GB-red)
+![Python](https://img.shields.io/badge/Python-3.10+-blue?logo=python&logoColor=white) ![Framework](https://img.shields.io/badge/Framework-HuggingFace-orange?logo=huggingface) ![License](https://img.shields.io/badge/License-MIT-green) ![Contributions](https://img.shields.io/badge/Contributions-Welcome-brightgreen?logo=github) ![GPU Required](https://img.shields.io/badge/Min%20GPU%20RAM-8GB-red)
 
 Welcome to the **Qwen2-VL Document Classification Pipeline** project! This repository showcases a powerful, streamlined pipeline for classifying various document types using the **Qwen2-VL-2B-GPTQ-INT4** model.
 
