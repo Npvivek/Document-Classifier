@@ -22,7 +22,6 @@ Welcome to the **Qwen2-VL Document Classification Pipeline**! This project is a 
 - [Results and Reporting](#results-and-reporting)
 - [Future Enhancements](#future-enhancements)
 - [Contributing](#contributing)
-- [License](#license)
 
 ---
 
@@ -138,9 +137,5 @@ For major changes, please open an issue first to discuss your ideas.
 
 ---
 
-## **License**
-This project is licensed under the MIT License. See the `LICENSE` file for details.
-
----
 
 Thank you for exploring the **Qwen2-VL Document Classification Pipeline**. Happy coding! 🚀
